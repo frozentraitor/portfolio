@@ -7,62 +7,89 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
-    title: "React Portfolio Website",
-    description: "Project 1 description",
-    image: "/images/projects/1.png",
-    tag: ["All", "Web"],
+    title: "Journal Application",
+    description: "MERN stack application where user can enter every day logs. It was built to handle multiple files including videos, location, mp4, pdf etc. AI tool were included to give custom suggestions to users.",
+    image: "/images/projects/1_1.png",
+    tag: ["Dev"],
     gitUrl: "/",
     previewUrl: "/",
   },
   {
     id: 2,
-    title: "Potography Portfolio Website",
-    description: "Project 2 description",
-    image: "/images/projects/2.png",
-    tag: ["All", "Web"],
+    title: "Chat bot",
+    description: "Made a MERN stack and GraphQL application where user can message or call other users in real-time. ",
+    image: "/images/projects/2_2.png",
+    tag: ["Dev"],
     gitUrl: "/",
     previewUrl: "/",
   },
   {
     id: 3,
     title: "E-commerce Application",
-    description: "Project 3 description",
-    image: "/images/projects/3.png",
-    tag: ["All", "Web"],
+    description: "Complete e-commerce website with Next.js where sellers can add their products, monitor sales etc and consumers can surf among different options. End to end secured payment process was implemented using Stripe. ",
+    image: "/images/projects/3_3.png",
+    tag: ["Dev"],
     gitUrl: "/",
     previewUrl: "/",
   },
   {
     id: 4,
-    title: "Food Ordering Application",
-    description: "Project 4 description",
-    image: "/images/projects/4.png",
-    tag: ["All", "Mobile"],
+    title: "Job Posting Application",
+    description: "Built a application using MERN stack using Next.js facilitating job posting and hiring.",
+    image: "/images/projects/4_4.png",
+    tag: ["Dev"],
     gitUrl: "/",
     previewUrl: "/",
   },
   {
     id: 5,
-    title: "React Firebase Template",
-    description: "Authentication and CRUD operations",
-    image: "/images/projects/5.png",
-    tag: ["All", "Web"],
+    title: "Card Counting App",
+    description: "Made this static mobile app using React Native that helps users learn how to count cards for blackjack and also teaches them how to play efficiently.",
+    image: "/images/projects/5_5.png",
+    tag: ["Dev"],
     gitUrl: "/",
     previewUrl: "/",
   },
   {
     id: 6,
-    title: "Full-stack Roadmap",
-    description: "Project 5 description",
-    image: "/images/projects/6.png",
-    tag: ["All", "Web"],
+    title: "SR GAN Model",
+    description: "I built a Super Resolution Image generating model in Tensorflow which will learn to generate high resolution images from low resolution images.",
+    image: "/images/projects/6_6.png",
+    tag: ["AI"],
+    gitUrl: "/",
+    previewUrl: "/",
+  },
+  {
+    id: 7,
+    title: "Dynamic Graphs",
+    description: "This DL Model studies a graph at different timestamps to identify the evolving nodes and predits it;s future shape.",
+    image: "/images/projects/7_7.png",
+    tag: ["AI"],
+    gitUrl: "/",
+    previewUrl: "/",
+  },
+  {
+    id: 7,
+    title: "Text Summarization",
+    description: "I have built a NLP tool using BERT and spaCy which can summarize news articles or product reviews and indicate the sentiment in them.",
+    image: "/images/projects/8_8.png",
+    tag: ["AI"],
+    gitUrl: "/",
+    previewUrl: "/",
+  },
+  {
+    id: 8,
+    title: "Rides App",
+    description: "This MERN stack application integrated with google maps API allows users to offer and book rides to near by places.",
+    image: "/images/projects/9_9.png",
+    tag: ["Dev"],
     gitUrl: "/",
     previewUrl: "/",
   },
 ];
 
 const ProjectsSection = () => {
-  const [tag, setTag] = useState("All");
+  const [tag, setTag] = useState("Dev");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -87,18 +114,13 @@ const ProjectsSection = () => {
       <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
         <ProjectTag
           onClick={handleTagChange}
-          name="All"
-          isSelected={tag === "All"}
+          name="Dev"
+          isSelected={tag === "Dev"}
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="Web"
-          isSelected={tag === "Web"}
-        />
-        <ProjectTag
-          onClick={handleTagChange}
-          name="Mobile"
-          isSelected={tag === "Mobile"}
+          name="AI"
+          isSelected={tag === "AI"}
         />
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
